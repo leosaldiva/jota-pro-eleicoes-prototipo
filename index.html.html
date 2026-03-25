@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JOTA PRO Eleições 2026</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f6f8;
+      color: #1F2128;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .hero, .section, .footer-cta { padding: 56px 0; }
+    .hero {
+      background: #fff;
+      border-bottom: 1px solid #e3e5ea;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 32px;
+      align-items: start;
+    }
+    .eyebrow {
+      color: #F05841;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .4px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 46px;
+      line-height: 1.08;
+      margin: 0 0 16px;
+    }
+    h2 {
+      font-size: 34px;
+      margin: 0 0 14px;
+    }
+    h3 {
+      margin: 0 0 10px;
+      font-size: 22px;
+    }
+    .subtitle, .section-subtitle, .muted {
+      color: #555a66;
+    }
+    .subtitle {
+      font-size: 20px;
+      max-width: 760px;
+      margin-bottom: 22px;
+    }
+    .hero-list, .bullet-list, .faq-list, .solution-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .hero-list li, .bullet-list li, .solution-list li {
+      margin-bottom: 10px;
+      color: #555a66;
+    }
+    .hero-list li:before, .bullet-list li:before, .solution-list li:before {
+      content: "✓";
+      color: #F05841;
+      font-weight: 700;
+      margin-right: 10px;
+    }
+    .btn {
+      display: inline-block;
+      background: #F05841;
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 22px;
+      border-radius: 4px;
+      font-weight: 700;
+      margin-right: 10px;
+    }
+    .btn.secondary {
+      background: #fff;
+      color: #1F2128;
+      border: 1px solid #cfd3da;
+    }
+    .card, .form-box, .proof-box, .faq-item, .value-box {
+      background: #fff;
+      border: 2px solid #d3d3d9;
+      border-radius: 6px;
+      padding: 24px;
+    }
+    .form-box .price {
+      font-size: 34px;
+      font-weight: 700;
+      margin: 8px 0 0;
+    }
+    .grid-4, .grid-3, .grid-2 {
+      display: grid;
+      gap: 12px;
+    }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+    .value-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .value-box li {
+      font-size: 20px;
+      color: #555a66;
+      margin-bottom: 14px;
+    }
+    .value-box li:before {
+      content: "•";
+      color: #F05841;
+      font-weight: 700;
+      margin-right: 10px;
+    }
+    .proof-box {
+      border-left: 6px solid #F05841;
+    }
+    .proof-box p { color: #555a66; margin: 0 0 12px; font-size: 18px; }
+
+    .section-subtitle { font-size: 18px; margin-bottom: 28px; max-width: 820px; }
+
+    .faq-item { margin-bottom: 12px; }
+    .faq-item p { margin: 0; color: #555a66; }
+
+    .footer-cta {
+      background: #fff;
+      border-top: 1px solid #e3e5ea;
+      text-align: center;
+    }
+    .mini-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 26px;
+    }
+    .mini-card {
+      background: #fafafa;
+      border: 1px solid #e3e5ea;
+      border-radius: 6px;
+      padding: 16px;
+    }
+    .mini-card strong {
+      color: #F05841;
+      display: block;
+      font-size: 14px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: .4px;
+    }
+    .addon {
+      border: 1px solid #d9dde3;
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 12px;
+    }
+    .addon h4 {
+      margin: 0 0 6px;
+      font-size: 18px;
+    }
+    .addon p {
+      margin: 0;
+      color: #73757F;
+      font-size: 15px;
+    }
+    .cta-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid, .grid-4, .grid-3, .grid-2, .mini-cards { grid-template-columns: 1fr; }
+      h1 { font-size: 34px; }
+      h2 { font-size: 28px; }
+      .subtitle { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">JOTA PRO Eleições 2026</div>
+        <h1>Monitore as eleições de 2026 com mais contexto e antecipação</h1>
+        <p class="subtitle">
+          O <b>JOTA PRO Eleições 2026</b> é uma cobertura especializada para empresas e organizações
+          que precisam acompanhar o ciclo eleitoral com mais contexto, antecipar cenários e avaliar
+          riscos políticos, regulatórios e institucionais com impacto sobre decisões estratégicas.
+        </p>
+        <ul class="hero-list">
+          <li>Fim da janela partidária, candidaturas e alianças</li>
+          <li>Polarização, cenários eleitorais e campanhas</li>
+          <li>Impactos regulatórios e econômicos da disputa</li>
+        </ul>
+
+        <div class="mini-cards">
+          <div class="mini-card">
+            <strong>Cobertura</strong>
+            De abril até o fim do segundo turno
+          </div>
+          <div class="mini-card">
+            <strong>Foco</strong>
+            Cenários, riscos e impactos institucionais
+          </div>
+        </div>
+
+        <div class="cta-group">
+          <a class="btn" href="#contratacao">Contratar agora</a>
+          <a class="btn secondary" href="#contato">Entrar em contato com a equipe</a>
+        </div>
+      </div>
+
+      <div class="form-box" id="contratacao">
+        <div class="eyebrow">Cobertura principal</div>
+        <h3>JOTA PRO Eleições 2026</h3>
+        <p class="muted">Cobertura exclusiva e independente para o monitoramento das eleições.</p>
+
+        <div class="card" style="padding:20px; margin-top:16px;">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:16px;">
+            <div>
+              <h3 style="margin-bottom:4px;">Plano principal</h3>
+              <p class="muted" style="margin:0;">Cobertura completa do ciclo eleitoral</p>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-size:12px; text-transform:uppercase; color:#73757F; letter-spacing:.4px;">Preço de tabela</div>
+              <div class="price">R$ X.XXX</div>
+            </div>
+          </div>
+
+          <ul class="solution-list" style="margin-top:18px;">
+            <li>Newsletter específica de eleições</li>
+            <li>Webinars recorrentes</li>
+            <li>Alertas para movimentações de grande impacto</li>
+            <li>Acesso ao agregador de pesquisas do JOTA</li>
+          </ul>
+        </div>
+
+        <div style="margin-top:18px;">
+          <div class="eyebrow" style="margin-bottom:10px;">Complementos opcionais</div>
+
+          <div class="addon">
+            <h4>Relatórios Estaduais</h4>
+            <p>Análises para acompanhar cenários regionais, comparar riscos e apoiar decisões institucionais e de negócio.</p>
+          </div>
+
+          <div class="addon">
+            <h4>Créditos Expert</h4>
+            <p>Possibilidade de fazer perguntas específicas a analistas do JOTA ao longo do ciclo eleitoral.</p>
+          </div>
+        </div>
+
+        <div class="cta-group">
+          <a class="btn" href="#">Contratar agora</a>
+          <a class="btn secondary" href="#contato">Falar com a equipe</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Inteligência para o ciclo eleitoral</h2>
+      <div class="value-box">
+        <ul>
+          <li>Monitoramento do ciclo eleitoral e de seus principais marcos</li>
+          <li>Análises sobre cenários, candidaturas, alianças, pesquisas e impactos institucionais</li>
+          <li>Acompanhamento voltado à antecipação de riscos políticos e regulatórios</li>
+          <li>Acesso ao agregador de pesquisas mais preciso do mercado</li>
+          <li>Inteligência para decisões com efeito fiscal, setorial, reputacional e de investimento</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>O que compõe o JOTA PRO Eleições 2026</h2>
+      <p class="section-subtitle">
+        O cliente contrata uma cobertura exclusiva para o ciclo eleitoral, com entregas materiais
+        voltadas à leitura de cenário, antecipação de riscos e apoio à tomada de decisão.
+      </p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Newsletter e análises</h3>
+          <ul class="solution-list">
+            <li>Newsletter semanal no pré-eleitoral e diária no período eleitoral</li>
+            <li>Análises sobre cenários, candidaturas, alianças e pesquisas</li>
+            <li>Leitura dos impactos políticos, regulatórios e institucionais para empresas</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Webinars e alertas</h3>
+          <ul class="solution-list">
+            <li>Webinars bimestrais no pré-eleitoral e semanais durante a campanha</li>
+            <li>Leitura de cenário com analistas do JOTA</li>
+            <li>Alertas para movimentações de grande impacto</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Agregador de pesquisas</h3>
+          <ul class="solution-list">
+            <li>Acesso ao agregador de pesquisas do JOTA</li>
+            <li>Preditor mais preciso do mercado em 2022</li>
+            <li>Ferramenta para acompanhar tendências e antecipar cenários eleitorais</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Aprofundamentos sob demanda</h3>
+          <ul class="solution-list">
+            <li>Relatórios Eleições Estaduais</li>
+            <li>Créditos Expert para perguntas a analistas do JOTA</li>
+            <li>Aprofundamentos ajustados às necessidades do cliente</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Prova de método</h2>
+      <div class="proof-box">
+        <p>Em 2022, o agregador de pesquisas eleitorais do JOTA indicou com precisão que a eleição presidencial seria decidida no segundo turno.</p>
+        <p>O modelo projetou Lula com 51,6% das intenções de voto, contra 48,4% de Jair Bolsonaro.</p>
+        <p>O resultado final foi 50,9% a 49,1%, reforçando a precisão do agregador como preditor de resultados.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contato">
+    <div class="container">
+      <h2>Perguntas frequentes</h2>
+
+      <div class="faq-item">
+        <h3>O que é o JOTA PRO Eleições 2026?</h3>
+        <p>É uma cobertura exclusiva e independente para o monitoramento das eleições, com foco em cenários, riscos e impactos institucionais para empresas.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>O que está incluído na cobertura?</h3>
+        <p>Newsletter específica de eleições, webinars recorrentes, alertas pontuais e acesso ao agregador de pesquisas do JOTA.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Quais complementos podem ser contratados?</h3>
+        <p>Relatórios Estaduais e Créditos Expert, conforme a necessidade do cliente.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Até quando vai a cobertura?</h3>
+        <p>De abril até o fim do segundo turno.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer-cta">
+    <div class="container">
+      <h2>Conheça o JOTA PRO Eleições 2026</h2>
+      <p class="section-subtitle" style="margin: 14px auto 24px;">
+        Cobertura exclusiva para acompanhar o ciclo eleitoral com mais contexto, antecipação e inteligência.
+      </p>
+      <a class="btn" href="#contratacao">Contratar agora</a>
+      <a class="btn secondary" href="#contato">Entrar em contato com a equipe</a>
+    </div>
+  </section>
+</body>
+</html>
